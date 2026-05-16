@@ -1,266 +1,119 @@
-# Healthcare Data Analytics Assignment  
-## Pivot Tables & Pivot Charts Using Healthcare Records
+# Healthcare Data Analytics – Summary Report
+**IOTB TECH Hospital | Dataset: 54,966 Patient Records**
+
+## Pivot Table Analyses & Charts
 
 ---
 
-# Business Scenario
+### Patient Overview
 
-**IOTB TECH Hospital** has been experiencing a steady increase in patient admissions across different departments. As the hospital continues to grow, management wants to better understand:
+ Total Patients = 54,966
 
-- Patient trends
-- Hospital revenue
-- Medical conditions
-- Admissions
-- Medication usage
+ Male = 27,496 (50.0%) 
 
-The hospital currently stores large amounts of healthcare records in Microsoft Excel, but management finds it difficult to quickly interpret raw data and make informed business decisions.
+ Female = 27,470 (50.0%) 
 
-To improve reporting and decision-making, the hospital wants the data to be analyzed and summarized using:
+ Most Common Blood Type = A- 
 
-- Pivot Tables
-- Pivot Charts
-- Data analysis techniques in Excel
+ Most Common Age Group = 65+ 
 
-Your task is to study the healthcare dataset provided and generate meaningful insights that can help management understand:
+**Gender Distribution**
+![Gender Distribution](<data/Gender Distribution.png>)
 
-- Patient behavior
-- Revenue patterns
-- Common medical conditions
-- Admission trends
-- Medication usage
-- Insurance contributions
+**Admissions by Age Group**
+![alt text](<data/Age group.png>)
 
-> **Note:** The focus of this assignment is not just creating charts, but learning how to use data to answer real business and healthcare questions.
+**Patients by Blood Group**
+![alt text](<data/Blood Group.png>)
 
 ---
 
-# Assignment Objectives
+### Medical Condition Analysis
 
-This assignment is designed to test your understanding of:
+ Most Common Condition = Arthritis 
 
-- Data cleaning and preparation
-- Pivot Tables
-- Pivot Charts
-- Data summarization
-- Analytical thinking
-- Presentation of findings
+ Highest Billing Condition = Diabetes ($236.5M) 
+
+ Longest Average Stay = Asthma (15.68 days) 
+
+**Most Common Medical Conditions**
+![alt text](<data/Medical Condition.png>)
+
+
+**Total Billing by Medical Condition**
+![alt text](<data/Billing Condition.png>)
+
+
+
+### Revenue & Billing Analysis
+
+ Total Hospital Revenue = $1,404,068,339 
+
+ Top Insurance Provider = Cigna ($284.3M) 
+
+ Highest Revenue Admission Type = Elective ($473.1M) 
+
+**Monthly Revenue Trend**
+![alt text](<data/Monthly Revenue.png>)
+
+**Billing by Insurance Provider**
+![alt text](data/INSURANCE.png)
+
+**Revenue by Admission Type**
+![alt text](<data/Admission Revenue.png>)
+---
+
+
+### Test Results Analysis
+
+ Total Abnormal Results = 18,437 
+
+ Condition with Most Abnormal Results = Arthritis (3,156) 
+
+
+
+### Medication Analysis
+
+ Most Prescribed Medication = Lipitor 
+
+ Highest Billing Medication = Ibuprofen ($283.8M) 
+
+**Most Prescribed Medications**
+![alt text](data/MEDICATION.png)
+
 
 ---
 
-# Part 1 — Data Preparation
+## Insights & Interpretation
 
-Before creating Pivot Tables, properly inspect and prepare the dataset.
+1. **Even gender split.** Male and female patients are nearly equal (50/50), suggesting the hospital serves both demographics equally and no gender-targeted outreach is needed.
 
-## Instructions:
+2. **Elderly patients dominate admissions.** The 65+ age group has the highest admissions, highlighting the hospital's heavy dependency on senior care. Investment in geriatric services is advisable.
 
-### 1. Data Cleaning
-Check the dataset for:
+3. **Arthritis is the most common condition**, yet Diabetes generates the highest total revenue ($236.5M). This means Diabetes patients incur higher individual costs despite not being the most frequent condition.
 
-- Blank rows
-- Duplicate records
-- Missing values
-- Incorrect data entries
-- Wrong data types
+4. **Asthma patients stay the longest** (avg. 15.68 days), making them among the most resource-intensive patients in terms of bed occupancy and staff time.
 
-### 2. Formatting
-Ensure proper formatting:
+5. **Revenue is relatively stable month-to-month** (avg. ~$23M/month), with a peak in August 2020. This indicates a steady business with seasonal spikes worth monitoring for staffing purposes.
 
-| Column | Required Format |
-|--------|----------------|
-| Billing Amount | Currency |
-| Admission Date | Date |
-| Discharge Date | Date |
+6. **Cigna is the top insurance contributor** at $284.3M. Maintaining a strong relationship with Cigna is financially critical for the hospital.
 
-### 3. Create New Column
-Create a new column called:
+7. **Elective admissions generate the most revenue** ($473.1M) and are also the most common admission type. Elective procedures are a key revenue driver and should be prioritized in scheduling.
 
-## `Length of Stay`
+8. **Female patients lead in emergency admissions** (9,166 vs 8,936 males). This warrants a review of emergency triage and women's health emergency preparedness.
 
-This shows the number of days each patient spent in the hospital.
+9. **Arthritis leads in abnormal test results** (3,156 cases). This may reflect the chronic and progressive nature of the condition, requiring closer monitoring and diagnostic follow-up.
 
-Use the formula:
-
-```excel
-=Discharge Date - Admission Date
-```
+10. **Ibuprofen generates the highest billing revenue** ($283.8M) despite Lipitor being the most prescribed medication. This suggests Ibuprofen is prescribed at higher cost per dosage or for higher-billing patient groups.
 
 ---
 
-# Part 2 — Pivot Table Tasks
-
-Use Pivot Tables to answer the following business questions.
-
----
-
-## Patient Analysis
-
-Create Pivot Tables to determine:
-
-- Total number of patients
-- Gender distribution of patients
-- Most common blood group
-- Age group with the highest admissions
-
----
-
-## Medical Condition Analysis
-
-Determine:
-
-- Most common medical condition
-- Medical condition with the highest billing amount
-- Condition with the longest average hospital stay
-
----
-
-## Revenue & Billing Analysis
-
-Determine:
-
-- Total hospital revenue
-- Monthly revenue trend
-- Insurance provider with the highest billing amount
-- Admission type generating the highest revenue
-
----
-
-## Admission Analysis
-
-Determine:
-
-- Most common admission type
-- Month with the highest admissions
-- Gender with the highest emergency admissions
-
----
-
-## Test Result Analysis
-
-Determine:
-
-- Number of abnormal test results
-- Condition associated with the highest abnormal test results
-
----
-
-## Medication Analysis
-
-Determine:
-
-- Most prescribed medication
-- Medication associated with the highest billing amount
-
----
-
-# Part 3 — Pivot Charts
-
-Create Pivot Charts for **at least TEN (10)** analyses above.
-
-## Recommended Chart Types
-
-Use any of the following:
-
-- Column Chart
-- Bar Chart
-- Pie Chart / Doughnut Chart
-- Line Chart
-
-## Chart Requirements
-
-Your charts must:
-
-- Have chart titles
-- Be properly labeled
-- Be neat and readable
-- Use suitable chart types
-- Present information clearly
-
----
-
-# Part 4 — Insights & Interpretation
-
-After completing your analysis, write **at least 10 insights** from your findings.
-
-Do not just present charts. Explain what the data means.
-
-## Example Questions to Answer
-
-- Which condition generates the highest revenue?
-- Which age group visits the hospital most?
-- Which insurance provider contributes the most financially?
-- Which admission type is most common?
-- Which condition keeps patients in the hospital the longest?
-
-Where necessary, include:
-
-- Recommendations
-- Observations
-- Business suggestions
-
----
-
-# Submission Requirements
-
-Submit the following:
-
-## 1. Excel Workbook
-
-Your workbook must contain:
-
-- Cleaned Dataset
-- Pivot Tables
-- Pivot Charts
-
-> Each should be placed on separate worksheets.
-
----
-
-## 2. Short Summary Report (`Word docs` or a`README.md`)
-
-Your report should include:
-
-- Key Findings
-- Observations
-- Insights
-- Recommendations
-
----
-
-## 3. GitHub Submission
-
-Push both files to your GitHub repository:
-
-- Excel Workbook
-- Summary Report (`Word docs` or `README.md`)
-
----
-
-# Important Notes
-
-Please ensure that:
-
-- You do not submit copied work
-- All Pivot Tables are properly labeled
-- All charts have meaningful titles
-- Your workbook is well organized
-- Your work is presented professionally
-* Submit your repository through the form [here](https://forms.office.com/r/xeYnafVvWV)
-
-
-> **Analytical thinking will be considered during your review.** 
-
-So show your analytical skills and present your findings like a real business analyst that you are.
-
----
-
-# Deadline
-
-## Submission Deadline:
-**12:00 Noon — Saturday, 16th May, 2026**
-
-⚠️ **Late submissions may attract penalties. No excuses will be accepted.**
-
----
-
-# Good Luck
+### Recommendations
+
+- **Expand geriatric and senior care services** to meet the demand from the dominant 65+ age group.
+- **Invest in Diabetes management programs** as it is the top revenue-generating condition and likely has high readmission rates.
+- **Review Asthma care pathways** to reduce the average 15.68-day stay, which ties up hospital beds.
+- **Strengthen the Cigna partnership** and negotiate favorable terms given their $284M contribution.
+- **Monitor emergency patterns for female patients** and ensure adequate emergency resources are allocated.
+- **Audit abnormal test results** especially for Arthritis patients in order to improve early diagnosis and treatment protocols.
 
